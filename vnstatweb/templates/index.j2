@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Traffic Statistics</title>
+		<style type="text/css">
+			a { text-decoration: underline; }
+			a:link { color: #b0b0b0; }
+			a:visited { color: #b0b0b0; }
+			a:hover { color: #000000; }
+			small { font-size: 8px; color: #cbcbcb; }
+			body { background-color: white; text-align: center; }
+		</style>
+	</head>
+	<body>
+			{% for graph in graphs %}
+			<p>
+				<a href="/viewimage/{{graph['interface']}}"><img src="/render/{{graph['interface']}}/summary" border="0" alt="{{graph['interface']}} summary"></a>
+			</p>
+			{% endfor %}
+			<small>Images generated using <a href="http://humdi.net/vnstat/">vnStat</a> image output.</small>
+	</body>
+</html>

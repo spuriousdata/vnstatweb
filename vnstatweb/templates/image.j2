@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Traffic Statistics for $servername</title>
+		<style type="text/css">
+			a { text-decoration: underline; }
+			a:link { color: #b0b0b0; }
+			a:visited { color: #b0b0b0; }
+			a:hover { color: #000000; }
+			small { font-size: 8px; color: #cbcbcb; }
+			html { 
+				display: table;
+				width: 100%;
+			}
+			body { 
+				background-color: {{bgcolor}};
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
+			}
+			table {
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="0">
+			<tr>
+				<td>
+					<img src="/render/{{interface}}/summary" border="0" alt="{{interface}} summary">
+				</td>
+				<td>
+					<img src="/render/{{interface}}/hours" border="0" alt="{{interface}} hourly">
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">
+					<img src="/render/{{interface}}/days" border="0" alt="{{interface}} daily">
+				</td>
+				<td valign="top">
+					<img src="/render/{{interface}}/top10" border="0" alt="{{interface}} top 10"><br>
+					<img src="/render/{{interface}}/months" border="0" alt="{{interface}} monthly" vspace="4">
+				</td>
+			</tr>
+		</table>
+		<small><br>&nbsp;Images generated using <a href="http://humdi.net/vnstat/">vnStat</a> image output.</small>
+	</body>
+</html>
